@@ -9,11 +9,7 @@ module Line
       @y2=y2
     end
     def distance
-      if(@x1==0)
-        1
-      else
-        5
-      end
+        ((@x1.to_d-@x2.to_d)**2+(@y1.to_d-@y2.to_d)**2)**0.5
     end
   end
 end
