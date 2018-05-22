@@ -12,6 +12,19 @@ module Line
       p2=Point.new(-7,0)
       expect(Line.new(p1,p2).distance).to eq(7)
     end
+    it "Return the absolute value difference between x coordinates if both points are on x axis" do
+      p1=Point.new(-7,0)
+      p2=Point.new(-9,0)
+      expect(Line.new(p1,p2).distance).to eq(2)
+    end
+=begin
+    it "show that the length of the line is the same if the initial and final points are reversed" do
+      p1=Point.new(0,7)
+      p2=Point.new(0,-65)
+      expect(Line.new(p1,p2).distance).to eq(72)
+    end
+=end
+
 
   end
 end
