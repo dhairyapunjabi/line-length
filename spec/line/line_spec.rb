@@ -22,5 +22,10 @@ module Line
       p2=Point.new(0,-65)
       expect(Line.new(p1,p2).distance).to eq(72)
     end
+    it "show that the length of the line is the same if the initial and final points are reversed" do
+      p1=Point.new(0,0)
+      p2=Point.new(1,1)
+      expect(Line.new(p1,p2).distance).to eq(Line.new(p2,p1).distance)
+    end
   end
 end
