@@ -7,5 +7,6 @@ module Line
       p2=Point.new(0,1)
       expect(Line.new(p1,p2).distance).to eq(1)
     end
- end
+
+  end
 end
