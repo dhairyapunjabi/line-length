@@ -1,15 +1,20 @@
 require "bigdecimal"
 require "bigdecimal/util"
 module Line
+  class Point
+    def initialize(x,y)
+      @x=x
+      @y=y
+    end
+    attr_reader :x , :y
+  end
   class Line
-    def initialize(x1,y1,x2,y2)
-      @x1=x1
-      @x2=x2
-      @y1=y1
-      @y2=y2
+    def initialize(p1,p2)
+      @p1=p1
+      @p2=p2
     end
     def distance
-        ((@x1.to_d-@x2.to_d)**2+(@y1.to_d-@y2.to_d)**2)**0.5
+      ((@p1.x.to_d-@p2.x.to_d)**2+(@p1.y.to_d-@p2.y.to_d)**2)**0.5
     end
   end
 end

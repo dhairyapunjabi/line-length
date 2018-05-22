@@ -3,7 +3,9 @@ require "spec_helper"
 module Line
   describe "The line module should" do
     it "Return the value of the positive coordinate if 3 coordinates are 0 and one is positive" do
-      expect(Line.new(0,0,0,1).distance).to eq(1)
+      p1=Point(0,0)
+      p2=Point(0,1)
+      expect(Line.new(p1,p2).distance).to eq(1)
     end
     it "Return the length of the line if all coordinates are positive" do
       expect(Line.new(1,2,1,7).distance).to eq(5)
